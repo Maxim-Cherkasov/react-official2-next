@@ -1,0 +1,51 @@
+.container {
+  width: 320px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+}
+
+.input-text {
+  margin-bottom: 0.5rem;
+}
+
+.input-checkbox {
+  margin-bottom: 1rem;
+}
+
+/* ProductTable */
+
+table {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+}
+
+.name-price {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.category {
+  text-align: center;
+  width: 320px;
+}
+
+.category-row {
+  margin: 0.5rem 0 0.5rem 0;
+  display: flex;
+}
+
+/* ProductRow */
+
+.product-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-row .item {
+  padding: 0 2rem 0 2rem;
+}
