@@ -1,6 +1,7 @@
 import "../styles/globals.css";
 import "../styles/search.css";
 import "../styles/start/ui.css";
+import "../styles/renLists/renLists.css";
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;

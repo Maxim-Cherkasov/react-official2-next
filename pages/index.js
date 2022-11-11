@@ -6,7 +6,7 @@ import styles from "../styles/Home.module.css";
 import Cr from "../pages/conditionalRendering/cr.js";
 import PropsChallenges from "./start/props-challenges.js";
 //import ListsProject from "../pages/reactMockup/RenderingListsProject.js";
-import renderingLists from "./renderingLists/renderingLists";
+import RenderingLists from "./renderingLists/renderingLists.js";
 
 export default function Home() {
   return (
