@@ -4,9 +4,11 @@ import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import Cr from "../pages/conditionalRendering/cr.js";
+import Profile from "../pages/start/Start.js";
 import PropsChallenges from "./start/props-challenges.js";
-//import ListsProject from "../pages/reactMockup/RenderingListsProject.js";
+import ListsProject from "../pages/reactMockup/RenderingListsProject.js";
 import RenderingLists from "./renderingLists/renderingLists.js";
+import PureComponent from "./pureComponents/pureComponents.js";
 
 export default function Home() {
   return (
@@ -18,7 +20,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <RenderingLists />
+        <Profile />
       </main>
 
       <footer className={styles.footer}>

@@ -40,7 +40,6 @@ function Profile() {
 
 // You can think of a component with a children prop as having a “hole” that can be “filled in” by its parent components with arbitrary JSX. You will often use the children prop for visual wrappers: panels, grids, and so on.
 
-/*
 import Avatar from "./Avatar.js";
 
 function Card({ children }) {
@@ -49,18 +48,17 @@ function Card({ children }) {
 
 export default function Profile() {
   return (
-    <Card>
-      // avatar gives these props itself through Avatar.js
-      <Avatar
-        size={100}
-        person={{
-          name: "Katsuko Saruhashi",
-          imageId: "YfeOqp2",
-        }}
-      />
-    </Card>
+    <a href="">
+      <Card>
+        <h1 style={{ color: "black" }}>One</h1>
+        <Avatar
+          size={100}
+          person={{
+            name: "Katsuko Saruhashi",
+            imageId: "YfeOqp2",
+          }}
+        />
+      </Card>
+    </a>
   );
 }
-*/
-
-

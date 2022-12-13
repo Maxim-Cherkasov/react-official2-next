@@ -1,5 +1,7 @@
 import Challenges from "./challenges";
+
 //* Rendering data from arrays
+// Theory and examples
 
 // The first formula
 // it shows an error bcz it doesn't have id but demonstrate an example of how it works
@@ -88,6 +90,7 @@ import { getImageUrl } from './utils.js';
 //* Working list
 
 // Important - JSX elements directly inside a map() call always need keys!
+// Each child in a list should have a unique “key” prop.
 
 /*
 import { people } from "./data.js";
