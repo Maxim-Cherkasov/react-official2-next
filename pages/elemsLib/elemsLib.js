@@ -1,8 +1,5 @@
-import { useState } from "react";
+//* Scientists cards with props
 
-// Challenge 1 of 3
-
-/*
 import { getImageUrl } from "./utils.js";
 
 function Profile({
@@ -65,109 +62,15 @@ export function Gallery() {
     </div>
   );
 }
-*/
 
-// Challenge 2 of 3
-/*
-import { getImageUrl } from "./utils.js";
-
-function Avatar({ person, size }) {
-  let thumbnailSize = "s";
-  if (size > 90) {
-    thumbnailSize = "b";
-  }
-  return (
-    <img
-      className="avatar"
-      src={getImageUrl(person, thumbnailSize)}
-      alt={person.name}
-      width={size}
-      height={size}
-    />
-  );
-}
-
-function Profile() {
-  return (
-    <>
-      <Avatar
-        size={40}
-        person={{
-          name: "Gregorio Y. Zara",
-          imageId: "7vQD0fP",
-        }}
-      />
-      <Avatar
-        size={120}
-        person={{
-          name: "Gregorio Y. Zara",
-          imageId: "7vQD0fP",
-        }}
-      />
-    </>
-  );
-}
-*/
-// With window.devicePixelRatio
-
-/*
-import { getImageUrl } from "./utils.js";
-
-const ratio = window.devicePixelRatio;
-
-function Avatar({ person, size }) {
-  let thumbnailSize = "s";
-  if (size * ratio > 90) {
-    thumbnailSize = "b";
-  }
-  return (
-    <img
-      className="avatar"
-      src={getImageUrl(person, thumbnailSize)}
-      alt={person.name}
-      width={size}
-      height={size}
-    />
-  );
-}
-
-function Profile() {
-  return (
-    <>
-      <Avatar
-        size={40}
-        person={{
-          name: "Gregorio Y. Zara",
-          imageId: "7vQD0fP",
-        }}
-      />
-      <Avatar
-        size={70}
-        person={{
-          name: "Gregorio Y. Zara",
-          imageId: "7vQD0fP",
-        }}
-      />
-      <Avatar
-        size={120}
-        person={{
-          name: "Gregorio Y. Zara",
-          imageId: "7vQD0fP",
-        }}
-      />
-    </>
-  );
-}
-*/
-// Challenge 3 of 3
-
-// import "../src/propsCss/task3.css";
+//* Image and About cards with props
 
 // First variant
+
 /*
-export default function Profile() {
+function Profile() {
   return (
-    <div>
+    <div style={{ color: "black" }}>
       <div className="card">
         <div className="card-content">
           <h1>Photo</h1>
@@ -197,11 +100,10 @@ export default function Profile() {
 // Second variant with children prop
 
 // We pass two different card children to Card component and get two different cards
-
 /*
 function Card({ children, title }) {
   return (
-    <div className="card">
+    <div className="card" style={{ color: "black" }}>
       <div className="card-content">
         <h1>{title}</h1>
         {children}
@@ -232,7 +134,70 @@ function Profile() {
   );
 }
 */
+//* Theme
+/*
+const person = {
+  name: "Gregorio Y. Zara",
+  theme: {
+    backgroundColor: "black",
+    color: "lightBlue",
+    border: "1px solid white",
+    borderRadius: "12px",
+    padding: "15px",
+  },
+};
 
-export default function PropsChallenges() {
-  return <Gallery />;
+function TodoList() {
+  return (
+    <div style={person.theme}>
+      <h1>{person.name}'s Todos</h1>
+      <img
+        className="avatar"
+        src="https://i.imgur.com/7vQD0fPs.jpg"
+        alt="Gregorio Y. Zara"
+      />
+      <ul>
+        <li>Improve the videophone</li>
+        <li>Prepare aeronautics lectures</li>
+        <li>Work on the alcohol-fuelled engine</li>
+      </ul>
+    </div>
+  );
+}
+*/
+//* Chemists list with map
+
+//* Docs solution 1.2
+
+// extracting the repetitive parts into a <ListSection> component
+// we pass two props title and people to ListSection function
+/*
+import { people } from "./data.js";
+import { getImageUrl } from "./utils.js";
+
+function List() {
+  const listItems = people.map((person) => (
+    <li key={person.id}>
+      <img src={getImageUrl(person)} alt={person.name} />
+      <p>
+        <b>{person.name}:</b>
+        {" " + person.profession + " "}
+        known for {person.accomplishment}
+      </p>
+    </li>
+  ));
+  return (
+    <article>
+      <h1>Scientists</h1>
+      <ul>{listItems}</ul>
+    </article>
+  );
+}
+*/
+export default function ElemsLib() {
+  return (
+    <div>
+      <Gallery />
+    </div>
+  );
 }

@@ -9,6 +9,7 @@ import PropsChallenges from "./start/props-challenges.js";
 import ListsProject from "../pages/reactMockup/RenderingListsProject.js";
 import RenderingLists from "./renderingLists/renderingLists.js";
 import PureComponent from "./pureComponents/pureComponents.js";
+import ElemsLib from "./elemsLib/elemsLib.js";
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Profile />
+        <ElemsLib />
       </main>
 
       <footer className={styles.footer}>
