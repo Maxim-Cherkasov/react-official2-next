@@ -58,8 +58,8 @@ li {
   gap: 20px;
   align-items: center;
 }
+// border radius 50% sets here if needed
 img {
   width: 100px;
   height: 100px;
-  border-radius: 50%;
 }
