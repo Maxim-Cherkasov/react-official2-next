@@ -11,6 +11,7 @@ import RenderingLists from "./renderingLists/renderingLists.js";
 import PureComponent from "./pureComponents/pureComponents.js";
 import ElemsLib from "./elemsLib/elemsLib.js";
 import AddingInteractivity from "./addingInteractivity/addingInteractivity";
+import RespondingToEvents from "./addingInteractivity/respondingToEvents/respondingToEvents";
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <AddingInteractivity />
+        <RespondingToEvents />
       </main>
 
       <footer className={styles.footer}>
