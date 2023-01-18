@@ -126,6 +126,7 @@ export default function Toolbar() {
 
 //* Stopping propagation
 
+/*
 function Button({ onClick, children }) {
   return (
     <button
@@ -150,5 +151,48 @@ export default function Toolbar() {
       <Button onClick={() => alert("Playing!")}>Play Movie</Button>
       <Button onClick={() => alert("Uploading!")}>Upload Image</Button>
     </div>
+  );
+}
+*/
+
+//* Passing handlers as alternative to propagation
+
+/*
+function Button({ onClick, children }) {
+  return (
+    <button onClick={e => {
+      e.stopPropagation();
+      onClick();
+    }}>
+      {children}
+    </button>
+  );
+}
+*/
+
+//* Preventing default behavior
+
+/*
+export default function Signup() {
+  return (
+    <form onSubmit={() => alert("Submitting!")}>
+      <input />
+      <button>Send</button>
+    </form>
+  );
+}
+*/
+
+export default function Signup() {
+  return (
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        alert("Submitting!");
+      }}
+    >
+      <input />
+      <button>Send</button>
+    </form>
   );
 }
