@@ -12,6 +12,9 @@ import PureComponent from "./pureComponents/pureComponents.js";
 import ElemsLib from "./elemsLib/elemsLib.js";
 import AddingInteractivity from "./addingInteractivity/addingInteractivity";
 import RespondingToEvents from "./addingInteractivity/respondingToEvents/respondingToEvents";
+import Main from "./addingInteractivity/respondingToEvents/main";
+import StateComponentsMemory from "./addingInteractivity/stateComponentsMemory/stateComponentsMemory";
+import Challenges from "./addingInteractivity/stateComponentsMemory/challenges";
 
 export default function Home() {
   return (
@@ -23,7 +26,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <RespondingToEvents />
+        <Challenges />
       </main>
 
       <footer className={styles.footer}>
