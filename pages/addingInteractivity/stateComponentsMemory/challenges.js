@@ -357,6 +357,7 @@ export default function FeedbackForm() {
 
 // You could also remove the unnecessary else branch to reduce the nesting. However, it’s still important that all calls to Hooks happen before the first return.
 
+/*
 import { useState } from "react";
 
 export default function FeedbackForm() {
@@ -384,4 +385,26 @@ export default function FeedbackForm() {
       <button type="submit">Send</button>
     </form>
   );
+}
+*/
+
+//* Challenge 4 of 4: Remove unnecessary state
+
+// When the button is clicked, this example should ask for the user’s name and then display an alert greeting them. You tried to use state to keep the name, but for some reason it always shows “Hello, !“.
+
+// To fix this code, remove the unnecessary state variable. (We will discuss about why this didn’t work later.)
+
+// Can you explain why this state variable was unnecessary?
+
+//* My solution
+
+// A state variable is only necessary to keep information between re-renders of a component. Within a single event handler, a regular variable will do fine. Don’t introduce state variables when a regular variable works well.
+
+export default function FeedbackForm() {
+  function handleClick() {
+    let name = prompt("What's your name?");
+    alert(`Hello, ${name}!`);
+  }
+
+  return <button onClick={handleClick}>Greet</button>;
 }

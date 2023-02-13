@@ -14,7 +14,10 @@ import AddingInteractivity from "./addingInteractivity/addingInteractivity";
 import RespondingToEvents from "./addingInteractivity/respondingToEvents/respondingToEvents";
 import Main from "./addingInteractivity/respondingToEvents/main";
 import StateComponentsMemory from "./addingInteractivity/stateComponentsMemory/stateComponentsMemory";
-import Challenges from "./addingInteractivity/stateComponentsMemory/challenges";
+import RenderAndCommit from "./addingInteractivity/renderAndCommit/renderAndCommit";
+import StateAsSnapshot from "./addingInteractivity/stateAsSnapshot/stateAsSnapshot";
+import QueueingSeriesStateUpdates from "./addingInteractivity/queueingSeriesStateUpdates/queueingSeriesStateUpdates";
+import UpdatingObjectsInState from "./addingInteractivity/updatingObjectsInState/updatingObjectsInState";
 
 export default function Home() {
   return (
@@ -26,7 +29,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Challenges />
+        <UpdatingObjectsInState />
       </main>
 
       <footer className={styles.footer}>
