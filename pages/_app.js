@@ -1,4 +1,4 @@
-import "../styles/globals.css";
+import "../styles/globals.scss";
 import "../styles/search.css";
 import "../styles/start/ui.css";
 import "../styles/renLists/renLists.css";

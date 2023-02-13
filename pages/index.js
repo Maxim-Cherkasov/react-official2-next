@@ -29,7 +29,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <UpdatingObjectsInState />
+        <ElemsLib />
       </main>
 
       <footer className={styles.footer}>

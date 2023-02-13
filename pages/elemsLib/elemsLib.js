@@ -2,6 +2,7 @@
 
 import { getImageUrl } from "./utils.js";
 
+/*
 function Profile({
   imageId,
   name,
@@ -62,12 +63,13 @@ export function Gallery() {
     </div>
   );
 }
+*/
 
 //* Image and About cards with props
 
 // First variant
-
 /*
+
 function Profile() {
   return (
     <div style={{ color: "black" }}>
@@ -100,6 +102,7 @@ function Profile() {
 // Second variant with children prop
 
 // We pass two different card children to Card component and get two different cards
+
 /*
 function Card({ children, title }) {
   return (
@@ -134,6 +137,7 @@ function Profile() {
   );
 }
 */
+
 //* Theme
 /*
 const person = {
@@ -173,7 +177,6 @@ function TodoList() {
 // we pass two props title and people to ListSection function
 /*
 import { people } from "./data.js";
-import { getImageUrl } from "./utils.js";
 
 function List() {
   const listItems = people.map((person) => (
@@ -194,10 +197,13 @@ function List() {
   );
 }
 */
+
+import Playground from "./playground";
+
 export default function ElemsLib() {
   return (
     <div>
-      <Gallery />
+      <Playground />
     </div>
   );
 }
