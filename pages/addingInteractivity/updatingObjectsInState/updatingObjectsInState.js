@@ -177,6 +177,7 @@ export default function Form() {
 
 //* Updating a nested object
 
+/*
 import { useState } from "react";
 
 export default function Form() {
@@ -254,4 +255,11 @@ export default function Form() {
       <img src={person.artwork.image} alt={person.artwork.title} />
     </>
   );
+}
+*/
+
+import Challenges from "./challenges.js";
+
+export default function Output() {
+  return <Challenges />;
 }
