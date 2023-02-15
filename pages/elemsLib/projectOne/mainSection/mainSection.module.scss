@@ -3,8 +3,10 @@
   display: flex;
   width: 100%;
   align-items: center;
-  background-image: url("/public/images/mainBackground.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 5;
+  position: relative;
+  object-fit: contain;
+
+  .info {
+    z-index: 2;
+  }
 }
