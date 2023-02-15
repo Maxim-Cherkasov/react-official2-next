@@ -1,0 +1,10 @@
+.mainContainer {
+  min-height: 80vh;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background-image: url("/public/images/mainBackground.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 5;
+}

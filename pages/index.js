@@ -18,6 +18,7 @@ import RenderAndCommit from "./addingInteractivity/renderAndCommit/renderAndComm
 import StateAsSnapshot from "./addingInteractivity/stateAsSnapshot/stateAsSnapshot";
 import QueueingSeriesStateUpdates from "./addingInteractivity/queueingSeriesStateUpdates/queueingSeriesStateUpdates";
 import UpdatingObjectsInState from "./addingInteractivity/updatingObjectsInState/updatingObjectsInState";
+import ProjectOne from "./elemsLib/projectOne/index";
 
 export default function Home() {
   return (
@@ -29,7 +30,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <ElemsLib />
+        <ProjectOne />
       </main>
 
       <footer className={styles.footer}>

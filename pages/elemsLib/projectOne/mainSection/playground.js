@@ -1,9 +1,8 @@
-import { getImageUrl } from "./utils.js";
 import style from "./playground.module.scss";
 
 function Profile() {
   return (
-    <div className={style.container}>
+    <div className={style.playContainer}>
       <div className={style.containerSecond}>
         <div className={style.card}>
           <div className={style.cardContent}>
