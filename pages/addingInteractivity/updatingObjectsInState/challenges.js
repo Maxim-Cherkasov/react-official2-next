@@ -73,8 +73,14 @@ export default function Canvas() {
   });
 
   function handleMove(dx, dy) {
-    shape.position.x += dx;
-    shape.position.y += dy;
+    setShape({
+      ...shape,
+      position: {
+        ...shape.initialPosition,
+        position: initialPosition.x += dx;
+        position: initialPosition.y += dy;
+      }
+    });
   }
 
   function handleColorChange(e) {
