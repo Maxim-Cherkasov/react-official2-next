@@ -86,7 +86,11 @@ export default function Canvas() {
 
   return (
     <>
-      <select value={shape.color} onChange={handleColorChange}>
+      <select
+        value={shape.color}
+        onChange={handleColorChange}
+        className={style.select}
+      >
         <option value="orange">orange</option>
         <option value="lightpink">lightpink</option>
         <option value="aliceblue">aliceblue</option>
