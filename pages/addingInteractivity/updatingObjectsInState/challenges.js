@@ -56,10 +56,10 @@ export default function Scoreboard() {
 }
 */
 
+import style from "./challenges.module.scss";
 import { useState } from "react";
 import Background from "./Background.js";
 import Box from "./Box.js";
-import style from "./challenges.module.scss";
 
 const initialPosition = {
   x: 0,
@@ -76,10 +76,9 @@ export default function Canvas() {
     setShape({
       ...shape,
       position: {
-        ...shape.initialPosition,
-        position: initialPosition.x += dx;
-        position: initialPosition.y += dy;
-      }
+        x: shape.position.x + dx,
+        y: shape.position.y + dy,
+      },
     });
   }
 
@@ -91,12 +90,8 @@ export default function Canvas() {
   }
 
   return (
-    <>
-      <select
-        value={shape.color}
-        onChange={handleColorChange}
-        className={style.select}
-      >
+    <div>
+      <select value={shape.color} onChange={handleColorChange}>
         <option value="orange">orange</option>
         <option value="lightpink">lightpink</option>
         <option value="aliceblue">aliceblue</option>
@@ -105,6 +100,6 @@ export default function Canvas() {
       <Box color={shape.color} position={shape.position} onMove={handleMove}>
         Drag me!
       </Box>
-    </>
+    </div>
   );
 }

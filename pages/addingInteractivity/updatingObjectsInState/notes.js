@@ -673,7 +673,8 @@ export default function Canvas() {
       </Box>
     </>
   );
-  }
+}
+
 
 Box.js
 
@@ -756,3 +757,103 @@ export default function Background({
     }} />
   );
 };
+
+Solution
+The problem was in the mutation inside handleMove. It mutated shape.position, but that’s the same object that initialPosition points at. This is why both the shape and the background move. (It’s a mutation, so the change doesn’t reflect on the screen until an unrelated update—the color change—triggers a re-render.)
+
+The fix is to remove the mutation from handleMove, and use the spread syntax to copy the shape. Note that += is a mutation, so you need to rewrite it to use a regular + operation.
+
+import { useState } from 'react';
+import Background from './Background.js';
+import Box from './Box.js';
+
+const initialPosition = {
+  x: 0,
+  y: 0
+};
+
+export default function Canvas() {
+  const [shape, setShape] = useState({
+    color: 'orange',
+    position: initialPosition
+  });
+
+  function handleMove(dx, dy) {
+    setShape({
+      ...shape,
+      position: {
+        x: shape.position.x + dx,
+        y: shape.position.y + dy,
+      }
+    });
+  }
+
+  function handleColorChange(e) {
+    setShape({
+      ...shape,
+      color: e.target.value
+    });
+  }
+
+  return (
+    <>
+      <select
+        value={shape.color}
+        onChange={handleColorChange}
+      >
+        <option value="orange">orange</option>
+        <option value="lightpink">lightpink</option>
+        <option value="aliceblue">aliceblue</option>
+      </select>
+      <Background
+        position={initialPosition}
+      />
+      <Box
+        color={shape.color}
+        position={shape.position}
+        onMove={handleMove}
+      >
+        Drag me!
+      </Box>
+    </>
+  );
+}
+
+
+
+
+
+
+
+
+
+
+i have two time parts to end up with this task and start the next one
+
+understand how box component works entirely
+break it down into peaces and focus on each
+write down questions in code that come to mind
+move step by step word to word in code
+
+box initially is set with position.x ,y prop, and then it seems they are changed by other funcs 
+
+i need to inspect those funcs
+- onMove is last prop i need to understand how it works
+
+* i don't get (e.pointerId)
+e.target.setPointerCapture(e.pointerId);
+e.target - needed to learn
+
+pointerId – уникальный идентификатор указателя, вызвавшего событие.
+
+Идентификатор генерируется браузером. Это свойство позволяет обрабатывать несколько указателей, например сенсорный экран со стилусом и мульти-тач (увидим примеры ниже).
+
+События указателя позволяют обрабатывать мульти-тач с помощью свойств pointerId и isPrimary.
+
+Обратите внимание: pointerId присваивается не на всё устройство, а для каждого касающегося пальца. Если коснуться экрана 5 пальцами одновременно, получим 5 событий pointerdown, каждое со своими координатами и индивидуальным pointerId.
+
+Мы можем отслеживать несколько касающихся экрана пальцев, используя их pointerId. Когда пользователь перемещает, а затем убирает палец, получаем события pointermove и pointerup с тем же pointerId, что и при событии pointerdown.
+
+elem.setPointerCapture(pointerId) – привязывает события с данными pointerId к elem. После такого вызова все события указателя с таким pointerId будут иметь elem в качестве целевого элемента (как будто произошли над elem), вне зависимости от того, где в документе они произошли.
+
+Другими словами, elem.setPointerCapture(pointerId) меняет target всех дальнейших событий с данным pointerId на elem.
