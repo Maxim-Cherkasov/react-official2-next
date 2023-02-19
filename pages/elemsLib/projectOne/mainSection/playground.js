@@ -6,7 +6,7 @@ function Profile() {
       <div className={style.containerSecond}>
         <div className={style.card}>
           <div className={style.cardContent}>
-            <h1>Грузоперевозки</h1>
+            <h2>Грузоперевозки</h2>
             <img
               className={style.avatar}
               src="https://img.icons8.com/arcade/256/container-truck.png"
@@ -18,7 +18,7 @@ function Profile() {
         </div>
         <div className={style.card}>
           <div className={style.cardContent}>
-            <h1>Грузчики</h1>
+            <h2>Грузчики</h2>
             <img
               className={style.avatar}
               src="https://img.icons8.com/color/256/movers.png"
@@ -32,7 +32,7 @@ function Profile() {
       <div className={style.containerThird}>
         <div className={style.card}>
           <div className={style.cardContent}>
-            <h1>Сборка мебели</h1>
+            <h2>Сборка мебели</h2>
             <img
               className={style.avatar}
               src="https://img.icons8.com/color/256/furniture.png"
@@ -44,7 +44,7 @@ function Profile() {
         </div>
         <div className={style.card}>
           <div className={style.cardContent}>
-            <h1>Эвакуатор</h1>
+            <h2>Эвакуатор</h2>
             <img
               className={style.avatar}
               src="https://img.icons8.com/color/256/tow-truck.png"
