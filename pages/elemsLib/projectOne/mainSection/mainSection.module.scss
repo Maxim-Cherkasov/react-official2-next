@@ -4,7 +4,11 @@
   width: 100%;
   align-items: center;
   position: relative;
-  object-fit: contain;
+  object-fit: none;
+
+  .bg {
+    object-fit: cover;
+  }
 
   .info {
     z-index: 2;

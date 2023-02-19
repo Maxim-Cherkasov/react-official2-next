@@ -7,6 +7,7 @@ export default function MainSection() {
   return (
     <div className={style.mainContainer}>
       <Image
+        className={style.bg}
         alt="background"
         src={background}
         placeholder="blur"
