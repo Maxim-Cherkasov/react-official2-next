@@ -6,6 +6,8 @@
   align-items: center;
   position: relative;
   object-fit: none;
+  color: white;
+  text-shadow: 2px 2px 8px #0000009c;
 
   .bg {
     object-fit: cover;
@@ -14,14 +16,18 @@
   .h1 {
     z-index: 2;
     padding: 1rem;
-    text-align: center;
+    text-shadow: 2px 2px 8px #423b3b66;
   }
 
   .info {
     z-index: 2;
-    border: 1px solid purple;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    row-gap: 1rem;
+
+    @media (max-width: 893px) {
+      flex-wrap: wrap-reverse;
+    }
   }
 }

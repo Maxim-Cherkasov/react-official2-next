@@ -21,7 +21,6 @@ export default function MainSection() {
 
       <secction className={style.info}>
         <Playground />
-        <CallToAction />
       </secction>
     </div>
   );
