@@ -840,6 +840,8 @@ box initially is set with position.x ,y prop, and then it seems they are changed
 i need to inspect those funcs
 - onMove is last prop i need to understand how it works
 
+# Plan is to learn all wards and expressions in depth from top to bottom Box component
+
 * i don't get (e.pointerId)
 e.target.setPointerCapture(e.pointerId);
 e.target - needed to learn
