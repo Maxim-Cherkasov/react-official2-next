@@ -9,10 +9,6 @@
   color: white;
   text-shadow: 2px 2px 8px #0000009c;
 
-  .bg {
-    object-fit: cover;
-  }
-
   .h1 {
     z-index: 2;
     padding: 1rem;
@@ -23,11 +19,7 @@
     z-index: 2;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     row-gap: 1rem;
-
-    @media (max-width: 893px) {
-      flex-wrap: wrap-reverse;
-    }
   }
 }
