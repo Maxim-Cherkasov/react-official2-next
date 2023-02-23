@@ -2,12 +2,10 @@
   min-height: 80vh;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
   align-items: center;
-  position: relative;
-  object-fit: none;
   color: white;
-  text-shadow: 2px 2px 8px #0000009c;
 
   .h1 {
     z-index: 2;
@@ -19,7 +17,7 @@
     z-index: 2;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     row-gap: 1rem;
   }
 }
