@@ -56,7 +56,9 @@ export default function Scoreboard() {
 }
 */
 
-import style from "./challenges.module.scss";
+//* Challenge 2 of 3: Find and fix the mutation
+
+import style from "./challenges.module.css";
 import { useState } from "react";
 import Background from "./Background.js";
 import Box from "./Box.js";
