@@ -15,7 +15,67 @@ export default function ClientsChoice() {
                 width={70}
                 height={70}
               />
-              <h2>Экономия времени</h2>
+              <h3 className={style.h3}>Экономия времени</h3>
+              <p className={style.explanation}>
+                Не надо звонить и вести долгие переговоры
+              </p>
+            </div>
+          </div>
+          <div className={style.card}>
+            <div className={style.cardContent}>
+              <img
+                className={style.avatar}
+                src="https://img.icons8.com/arcade/256/container-truck.png"
+                alt="Aklilu Lemma"
+                width={70}
+                height={70}
+              />
+              <h3 className={style.h3}>Экономия времени</h3>
+              <p className={style.explanation}>
+                Не надо звонить и вести долгие переговоры
+              </p>
+            </div>
+          </div>
+          <div className={style.card}>
+            <div className={style.cardContent}>
+              <img
+                className={style.avatar}
+                src="https://img.icons8.com/arcade/256/container-truck.png"
+                alt="Aklilu Lemma"
+                width={70}
+                height={70}
+              />
+              <h3 className={style.h3}>Экономия времени</h3>
+              <p className={style.explanation}>
+                Не надо звонить и вести долгие переговоры
+              </p>
+            </div>
+          </div>
+          <div className={style.card}>
+            <div className={style.cardContent}>
+              <img
+                className={style.avatar}
+                src="https://img.icons8.com/arcade/256/container-truck.png"
+                alt="Aklilu Lemma"
+                width={70}
+                height={70}
+              />
+              <h3 className={style.h3}>Экономия времени</h3>
+              <p className={style.explanation}>
+                Не надо звонить и вести долгие переговоры
+              </p>
+            </div>
+          </div>
+          <div className={style.card}>
+            <div className={style.cardContent}>
+              <img
+                className={style.avatar}
+                src="https://img.icons8.com/arcade/256/container-truck.png"
+                alt="Aklilu Lemma"
+                width={70}
+                height={70}
+              />
+              <h3 className={style.h3}>Экономия времени</h3>
               <p className={style.explanation}>
                 Не надо звонить и вести долгие переговоры
               </p>
@@ -30,39 +90,7 @@ export default function ClientsChoice() {
                 width={70}
                 height={70}
               />
-              <h2>Гарантия цены</h2>
-              <p className={style.explanation}>
-                Исполнитель не изменит цену и условия в последний момент
-              </p>
-            </div>
-          </div>
-        </div>
-        <div className={style.containerThird}>
-          <div className={style.card}>
-            <div className={style.cardContent}>
-              <img
-                className={style.avatar}
-                src="https://img.icons8.com/color/256/furniture.png"
-                alt="Aklilu Lemma"
-                width={70}
-                height={70}
-              />
-              <h2>Гарантия цены</h2>
-              <p className={style.explanation}>
-                Исполнитель не изменит цену и условия в последний момент
-              </p>
-            </div>
-          </div>
-          <div className={style.card}>
-            <div className={style.cardContent}>
-              <img
-                className={style.avatar}
-                src="https://img.icons8.com/color/256/tow-truck.png"
-                alt="Aklilu Lemma"
-                width={70}
-                height={70}
-              />
-              <h2>Гарантия цены</h2>
+              <h3 className={style.h3}>Гарантия цены</h3>
               <p className={style.explanation}>
                 Исполнитель не изменит цену и условия в последний момент
               </p>
