@@ -202,3 +202,156 @@ export default function Box({ children, color, position, onMove }) {
     </div>
   );
 }
+
+//* Challenge 3 of 3: Update an object with Immer
+
+//This is the same buggy example as in the previous challenge. This time, fix the mutation by using Immer. For your convenience, useImmer is already imported, so you need to change the shape state variable to use it.
+
+import { useImmer } from "use-immer";
+import style from "./challenges.module.css";
+import { useState } from "react";
+import Background from "./Background.js";
+import Box from "./Box.js";
+
+const initialPosition = {
+  x: 0,
+  y: 0,
+};
+
+export default function Canvas() {
+  const [shape, setShape] = useState({
+    color: "orange",
+    position: initialPosition,
+  });
+
+  function handleMove(dx, dy) {
+    setShape(draft => {
+      draft.position.x + dx,
+      draft.position.y + dy,
+    });
+  }
+
+  function handleColorChange(e) {
+    setShape({
+      ...shape,
+      color: e.target.value,
+    });
+  }
+
+  return (
+    <div>
+      <select value={shape.color} onChange={handleColorChange}>
+        <option value="orange">orange</option>
+        <option value="lightpink">lightpink</option>
+        <option value="aliceblue">aliceblue</option>
+      </select>
+      <Background position={initialPosition} />
+      <Box color={shape.color} position={shape.position} onMove={handleMove}>
+        Drag me!
+      </Box>
+    </div>
+  );
+}
+
+import { useState } from 'react';
+
+export default function Form() {
+  const [person, setPerson] = useState({
+    name: 'Niki de Saint Phalle',
+    artwork: {
+      title: 'Blue Nana',
+      city: 'Hamburg',
+      image: 'https://i.imgur.com/Sd1AgUOm.jpg',
+    }
+  });
+
+  function handleNameChange(e) {
+    setPerson({
+      ...person,
+      name: e.target.value
+    });
+  }
+
+  function handleTitleChange(e) {
+    setPerson({
+      ...person,
+      artwork: {
+        ...person.artwork,
+        title: e.target.value
+      }
+    });
+  }
+
+  function handleCityChange(e) {
+    setPerson({
+      ...person,
+      artwork: {
+        ...person.artwork,
+        city: e.target.value
+      }
+    });
+  }
+
+  updatePerson(draft => {
+    draft.artwork.city = 'Lagos';
+  });
+
+  function handleImageChange(e) {
+    setPerson({
+      ...person,
+      artwork: {
+        ...person.artwork,
+        image: e.target.value
+      }
+    });
+  }
+
+  return (
+    <>
+      <label>
+        Name:
+        <input
+          value={person.name}
+          onChange={handleNameChange}
+        />
+      </label>
+      <label>
+        Title:
+        <input
+          value={person.artwork.title}
+          onChange={handleTitleChange}
+        />
+      </label>
+      <label>
+        City:
+        <input
+          value={person.artwork.city}
+          onChange={handleCityChange}
+        />
+      </label>
+      <label>
+        Image:
+        <input
+          value={person.artwork.image}
+          onChange={handleImageChange}
+        />
+      </label>
+      <p>
+        <i>{person.artwork.title}</i>
+        {' by '}
+        {person.name}
+        <br />
+        (located in {person.artwork.city})
+      </p>
+      <img 
+        src={person.artwork.image} 
+        alt={person.artwork.title}
+      />
+    </>
+  );
+}
+
+
+updatePerson(draft => {
+  draft.artwork.city = 'Lagos';
+});
