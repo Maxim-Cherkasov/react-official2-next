@@ -4,18 +4,20 @@ function Profile() {
   return (
     <div className={style.playContainer}>
       <div className={style.containerSecond}>
-        <div className={style.card}>
-          <div className={style.cardContent}>
-            <h2>Грузоперевозки</h2>
-            <img
-              className={style.avatar}
-              src="https://img.icons8.com/arcade/256/container-truck.png"
-              alt="Aklilu Lemma"
-              width={70}
-              height={70}
-            />
+        <a href="#">
+          <div className={style.card}>
+            <div className={style.cardContent}>
+              <h2>Грузоперевозки</h2>
+              <img
+                className={style.avatar}
+                src="https://img.icons8.com/arcade/256/container-truck.png"
+                alt="Aklilu Lemma"
+                width={70}
+                height={70}
+              />
+            </div>
           </div>
-        </div>
+        </a>
         <div className={style.card}>
           <div className={style.cardContent}>
             <h2>Грузчики</h2>
