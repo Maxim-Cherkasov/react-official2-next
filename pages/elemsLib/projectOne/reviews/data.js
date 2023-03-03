@@ -1,11 +1,11 @@
 export const sculptureList = [
   {
-    name: "Homenaje a la Neurocirugía",
-    artist: "Marta Colvin Andrade",
+    name: "Екатерина Б.",
+    artist: "переезд картиры, сборка мебели",
     description:
-      "Although Colvin is predominantly known for abstract themes that allude to pre-Hispanic symbols, this gigantic sculpture, an homage to neurosurgery, is one of her most recognizable public art pieces.",
-    url: "https://i.imgur.com/Mx7dA2Y.jpg",
-    alt: "A bronze statue of two crossed hands delicately holding a human brain in their fingertips.",
+      "Если перевезти что то надо , то только с этими ребятами !!! Все переезды только к ним! Ответственные , порядочные , ПУНКТУАЛЬНЫЕ, что редко в наше время . Все без лишних слов, слаженная работа . Спасибо огромное ребятам , ни один раз выручали 🙏",
+    url: "https://avatars.mds.yandex.net/get-yapic/35885/FhBfkT2XLTLytTgSaMHc9JQcYxg-1/islands-75",
+    alt: "Аватар",
   },
   {
     name: "Floralis Genérica",

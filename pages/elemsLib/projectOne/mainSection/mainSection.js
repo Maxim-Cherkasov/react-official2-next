@@ -1,5 +1,5 @@
 import Playground from "./playground";
-import CallToAction from "./callToAction";
+import Reviews from "../reviews/reviews";
 import Image from "next/image";
 import style from "./mainSection.module.scss";
 import background from "/public/images/mainBackground.jpg";
@@ -10,7 +10,7 @@ export default function MainSection() {
       <h1 className={style.h1}>Грузовоз123</h1>
       <secction className={style.info}>
         <Playground />
-        <CallToAction />
+        <Reviews />
       </secction>
     </div>
   );
