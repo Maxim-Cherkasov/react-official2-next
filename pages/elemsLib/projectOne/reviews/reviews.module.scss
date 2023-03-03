@@ -2,15 +2,27 @@
   max-width: 590px;
   display: flex;
   flex-direction: column;
-  border: 2px solid grey;
-  border-radius: 20px;
-  height: 330px;
+  height: 328px;
   margin-top: 0.5rem;
   padding: 1.3rem;
   gap: 0.8rem;
 
+  border-radius: 20px;
+  border: 1px solid #5090d3;
+  background-color: #132f4c;
+
   @media (max-width: 1024px) {
     max-width: 400px;
+    height: auto;
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+
+    .h2 {
+      font-size: 1.8rem;
+    }
   }
 
   .btns {
@@ -24,18 +36,17 @@
     }
   }
 
-  .nav {
-    display: flex;
-    justify-content: flex-end;
-  }
-
   .person {
     display: flex;
     gap: 1rem;
     align-items: center;
 
     .avatar {
-      border-radius: 8px;
+      border-radius: 50%;
+    }
+
+    .avatarName {
+      font-size: 1.3rem;
     }
   }
 

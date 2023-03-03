@@ -24,6 +24,7 @@ export default function Reviews() {
   return (
     <div className={style.reviewsContainer}>
       <nav className={style.nav}>
+        <h2 className={style.h2}>Отзывы</h2>
         <div className={style.btns}>
           <button
             onClick={handlePrevClick}

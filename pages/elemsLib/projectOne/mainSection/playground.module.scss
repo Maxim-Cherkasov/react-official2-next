@@ -8,9 +8,13 @@
 
     .card {
       border-radius: 20px;
-      border: 2px solid #5090d3;
+      border: 1px solid #5090d3;
       margin: 0.5rem;
       background-color: #132f4c;
+      min-width: 12rem;
+      @media (max-width: 478px) {
+        min-width: 320px;
+      }
 
       .cardContent {
         padding: 1.4rem;
@@ -19,14 +23,9 @@
         gap: 1rem;
 
         h2 {
-          min-width: 9rem;
           text-align: left;
           font-size: 1.2rem;
           font-weight: 600;
-
-          @media (max-width: 650px) {
-            min-width: 10rem;
-          }
         }
 
         .avatar {
