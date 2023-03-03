@@ -24,25 +24,38 @@ export default function Reviews() {
   return (
     <div className={style.reviewsContainer}>
       <nav className={style.nav}>
-        <h3>
-          {index + 1} из {sculptureList.length}
-        </h3>
         <div className={style.btns}>
-          <button onClick={handlePrevClick} disabled={!hasPrev}>
-            Previous
+          <button
+            onClick={handlePrevClick}
+            disabled={!hasPrev}
+            className={style.btnPrev}
+          >
+            назад
           </button>
-          <button onClick={handleNextClick} disabled={!hasNext}>
-            Next
+          <button
+            onClick={handleNextClick}
+            disabled={!hasNext}
+            className={style.btnNext}
+          >
+            вперед
           </button>
         </div>
       </nav>
-      <h2>
-        <i>{sculpture.name}</i>
-        <br></br>
-        <img src={sculpture.url} alt={sculpture.alt} style={{ maxWidth: 50 }} />
-        <br></br>
-        Услуги: {sculpture.artist}
-      </h2>
+
+      <div className={style.person}>
+        <img
+          src={sculpture.url}
+          alt={sculpture.alt}
+          style={{ maxWidth: 50 }}
+          className={style.avatar}
+        />
+        <h2 className={style.avatarName}>
+          <i>{sculpture.name}</i>
+        </h2>
+      </div>
+
+      <h3 className={style.h3}>Услуги: {sculpture.artist}</h3>
+
       <p>{sculpture.description}</p>
       <button type="button" className={style.btnCall}>
         Заказать
