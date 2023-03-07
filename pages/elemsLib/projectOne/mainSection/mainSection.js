@@ -7,7 +7,6 @@ import background from "/public/images/mainBackground.jpg";
 export default function MainSection() {
   return (
     <div className={style.mainContainer}>
-      <h1 className={style.h1}>Грузовоз123</h1>
       <secction className={style.info}>
         <Playground />
         <Reviews />

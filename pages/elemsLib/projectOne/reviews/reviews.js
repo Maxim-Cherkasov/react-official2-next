@@ -57,7 +57,7 @@ export default function Reviews() {
 
       <h3 className={style.h3}>Услуги: {sculpture.artist}</h3>
 
-      <p>{sculpture.description}</p>
+      <p className={style.description}>{sculpture.description}</p>
       <button type="button" className={style.btnCall}>
         Заказать
       </button>
