@@ -574,6 +574,7 @@ Updating nested arrays without mutation can get a little bit repetitive. Just as
 
 Generally, you shouldn’t need to update state more than a couple of levels deep. If your state objects are very deep, you might want to restructure them differently so that they are flat.
 If you don’t want to change your state structure, you might prefer to use Immer, which lets you write using the convenient but mutating syntax and takes care of producing the copies for you.
+
 Here is the Art Bucket List example rewritten with Immer:
 
 import { useState } from 'react';
@@ -651,3 +652,70 @@ function ItemList({ artworks, onToggle }) {
   );
 }
 
+Note how with Immer, mutation like artwork.seen = nextSeen is now okay:
+
+updateMyTodos(draft => {
+  const artwork = draft.find(a => a.id === artworkId);
+  artwork.seen = nextSeen;
+});
+
+This is because you’re not mutating the original state, but you’re mutating a special draft object provided by Immer. Similarly, you can apply mutating methods like push() and pop() to the content of the draft.
+
+Behind the scenes, Immer always constructs the next state from scratch according to the changes that you’ve done to the draft. This keeps your event handlers very concise without ever mutating state.
+
+# Recap
+
+You can put arrays into state, but you can’t change them.
+Instead of mutating an array, create a new version of it, and update the state to it.
+You can use the [...arr, newItem] array spread syntax to create arrays with new items.
+You can use filter() and map() to create new arrays with filtered or transformed items.
+You can use Immer to keep your code concise.
+
+# Try out some challenges
+
+Challenge 1 of 4: Update an item in the shopping cart 
+Fill in the handleIncreaseClick logic so that pressing ”+” increases the corresponding number:
+
+import { useState } from 'react';
+
+const initialProducts = [{
+  id: 0,
+  name: 'Baklava',
+  count: 1,
+}, {
+  id: 1,
+  name: 'Cheese',
+  count: 5,
+}, {
+  id: 2,
+  name: 'Spaghetti',
+  count: 2,
+}];
+
+export default function ShoppingCart() {
+  const [
+    products,
+    setProducts
+  ] = useState(initialProducts)
+
+  function handleIncreaseClick(productId) {
+
+  }
+
+  return (
+    <ul>
+      {products.map(product => (
+        <li key={product.id}>
+          {product.name}
+          {' '}
+          (<b>{product.count}</b>)
+          <button onClick={() => {
+            handleIncreaseClick(product.id);
+          }}>
+            +
+          </button>
+        </li>
+      ))}
+    </ul>
+  );
+}
