@@ -68,7 +68,6 @@ function List() {
   );
 }
 */
-
 //* Transforming an array
 
 /*
@@ -322,6 +321,7 @@ function ItemList({ artworks, onToggle }) {
 
 //* Write concise update logic with Immer. Here is the Art Bucket List example rewritten with Immer:
 
+/*
 import { useState } from "react";
 import { useImmer } from "use-immer";
 
@@ -381,7 +381,8 @@ function ItemList({ artworks, onToggle }) {
     </ul>
   );
 }
+*/
 
 export default function UpdatingArraysInState() {
-  return <BucketList />;
+  return <List />;
 }

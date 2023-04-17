@@ -185,7 +185,7 @@ export default function ShapeEditor() {
   const [shapes, setShapes] = useState(
     initialShapes
   );
-
+    // changing initialShapes to nextShapes in useState
   function handleClick() {
     const nextShapes = shapes.map(shape => {
       if (shape.type === 'square') {
@@ -208,6 +208,7 @@ export default function ShapeEditor() {
       <button onClick={handleClick}>
         Move circles down!
       </button>
+      // after the click array changed and the map shows the new one
       {shapes.map(shape => (
         <div
           key={shape.id}
