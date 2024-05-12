@@ -26,7 +26,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <Challenges />
+        <ElemsLib />
       </main>
 
       <footer className={styles.footer}>
