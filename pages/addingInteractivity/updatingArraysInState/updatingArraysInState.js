@@ -2,7 +2,6 @@
 
 // Updating arrays without mutation
 
-/*
 import { useState } from "react";
 
 let nextId = 0;
@@ -31,7 +30,6 @@ function List() {
     </>
   );
 }
-*/
 
 //* Removing from an array
 
